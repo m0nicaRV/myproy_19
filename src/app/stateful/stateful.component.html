@@ -1,0 +1,18 @@
+<main role="main" class="container">
+    <div class="starter-template">
+        <h1>Stateful</h1>
+        <p class="lead">Ejemplo componente stateful</p>
+
+        <div class="card-deck">
+            <div class="card" *ngFor="let movil of shopModel">
+                <img class="card-img-top" src="{{movil.picture}}" alt="{{movil.title}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{movil.title}}</h5>
+                    <p class="card-text">{{movil.desc}}</p>
+                    <p class="card-text">Precio: {{movil.price}}</p>
+                    <a href="#" class="btn btn-primary">Comprar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
