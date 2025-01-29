@@ -21,7 +21,7 @@ export class ShopModel {
             {
                 title:"Iphone 11",
                 desc: "Movil de alta generacion",
-                picture:"assets/iphone11.jpeg",
+                picture:"assets/iphone.jpeg",
                 price: 999
             }
         ]

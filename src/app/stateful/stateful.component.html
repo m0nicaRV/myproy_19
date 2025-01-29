@@ -3,16 +3,14 @@
         <h1>Stateful</h1>
         <p class="lead">Ejemplo componente stateful</p>
 
-        <div class="card-deck">
-            <div class="card" *ngFor="let movil of shopModel">
-                <img class="card-img-top" src="{{movil.picture}}" alt="{{movil.title}}">
-                <div class="card-body">
-                    <h5 class="card-title">{{movil.title}}</h5>
-                    <p class="card-text">{{movil.desc}}</p>
-                    <p class="card-text">Precio: {{movil.price}}</p>
-                    <a href="#" class="btn btn-primary">Comprar</a>
-                </div>
+        <div class="card-deck d-flex">
+            <div class="card col-3 m-2" *ngFor="let movil of shopModel">
+               <app-stateless [product]="movil"(boughtItemEmiter)="setBoughtItems($event)" > </app-stateless>
             </div>
+
+            <ul class="list-group">
+                <li *ngFor="let boughtItem of boughtItems" class="list-group-item"> {{boughtItem.title}}</li>
+            </ul>
         </div>
     </div>
 </main>
