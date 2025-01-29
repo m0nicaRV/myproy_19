@@ -3,5 +3,7 @@
     <h5 class="card-title">{{product.title}}</h5>
     <p class="card-text">{{product.desc}}</p>
     <p class="card-text">Precio: {{product.price}}</p>
-    <button type="button" class="btn btn-primary" [disabled]="isdisabled()" (click)="bought(product)">{{compra}}</button>
+    <button type="button" class="btn btn-primary m-2" [disabled]="isdisabled()" (click)="bought(product)">{{compra}}</button>
+    <button type="button" class="btn btn-danger m-2" [disabled]="!isdisabled()" (click)="bought(product)">Eliminar</button>
+
 </div>

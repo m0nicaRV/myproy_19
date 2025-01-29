@@ -27,11 +27,11 @@ export class StatelessComponent {
         this.compra="Comprado";
     }
     this.boughtItemEmiter.emit(item);
-   
   }
+  
 
   isdisabled(){
-    //return this.disable;
+    return this.disable;
   }
 
 
