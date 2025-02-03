@@ -11,13 +11,13 @@ import { StatefulComponent } from '../stateful/stateful.component';
 export class StatelessComponent {
   public compra:string="Comprar";
   private disable:boolean=false;
-  @Input() product: Product={};
+  @Input() product!: Product;
   @Output() boughtItemEmiter = new EventEmitter<Product>();
 
   constructor() { 
   }
 
-  bought(item:Product){
+  bought(){
     if(this.compra == "Comprado"){
       this.disable=false;
       this.compra="Comprar";
@@ -26,7 +26,7 @@ export class StatelessComponent {
         this.disable=true;
         this.compra="Comprado";
     }
-    this.boughtItemEmiter.emit(item);
+    this.boughtItemEmiter.emit(this.product);
   }
   
 
